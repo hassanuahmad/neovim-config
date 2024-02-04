@@ -7,6 +7,28 @@ return {
 		"MunifTanjim/nui.nvim",
 	},
 	config = function()
+		local config = require("neo-tree")
+		config.setup({
+			filesystem = {
+				filtered_items = {
+					visible = true,
+					never_show = {
+						"node_modules",
+						".next",
+						".git",
+						".idea",
+						".DS_Store",
+						"thumbs.db",
+					},
+					always_show = {
+						".env",
+						".env.local",
+						".gitignore",
+					},
+				},
+			},
+		})
+
 		vim.keymap.set("n", "<C-n>", ":Neotree toggle filesystem reveal left<CR>", {})
 	end,
 }
