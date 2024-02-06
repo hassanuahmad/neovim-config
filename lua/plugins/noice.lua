@@ -24,4 +24,16 @@ return {
 			},
 		})
 	end,
+	vim.keymap.set("n", "<leader>nl", function()
+		require("noice").cmd("last")
+	end),
+	vim.keymap.set("n", "<leader>nh", function()
+		require("noice").cmd("history")
+	end),
+	vim.keymap.set("n", "<leader>na", function()
+		require("noice").cmd("all")
+	end),
+	vim.keymap.set("n", "<leader>nd", function()
+		require("noice").cmd("dismiss")
+	end),
 }

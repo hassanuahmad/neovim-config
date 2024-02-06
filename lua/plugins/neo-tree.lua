@@ -29,6 +29,11 @@ return {
 			},
 		})
 
-		vim.keymap.set("n", "<C-n>", ":Neotree toggle filesystem reveal left<CR>", {})
+		vim.keymap.set(
+			"n",
+			"<C-n>",
+			":Neotree toggle filesystem reveal left<CR>",
+			{ noremap = true, silent = true, desc = "Toggle Neo-tree Sidebar" }
+		)
 	end,
 }
