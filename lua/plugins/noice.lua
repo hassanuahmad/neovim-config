@@ -22,6 +22,9 @@ return {
 				inc_rename = false,
 				lsp_doc_border = false,
 			},
+			messages = {
+				enabled = false,
+			},
 		})
 	end,
 	vim.keymap.set("n", "<leader>nl", function()
